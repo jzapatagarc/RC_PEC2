@@ -1,0 +1,1867 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology" ],
+    "title" : {
+      "undefined" : "Wine Ontology PEC2"
+    },
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "comments" : {
+      "undefined" : "Wine Ontology for Recommendation System\nAuthors: Yago Estévez Davila, José David Zapata García"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://purl.org/NET/rdflicense/cc-by4.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Wine Ontology PEC2",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Grape",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Grape"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Garnacha",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Garnacha"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Caiño_blanco",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Caiño_blanco"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Loureiro",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Loureiro"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moscatel_de_Alejandría",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Moscatel_de_Alejandría"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrell",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Monastrell"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Fruit used to make wine"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WineColour"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "White"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Red"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rose",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Rose"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Wine's visual qualities"
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#NonSweetFruit",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonSweetFruit"
+    },
+    "subClasses" : [ "9" ],
+    "comment" : {
+      "undefined" : "Fruits with a sour or acid taste"
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Crianza",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Crianza"
+    },
+    "comment" : {
+      "undefined" : "These wines usually have 24 or less months of aging"
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Reserva",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Reserva"
+    },
+    "comment" : {
+      "undefined" : "These wines have been aged between 25 and 59 months"
+    },
+    "id" : "12",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WineBody"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Full",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Full"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Medium",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Medium"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Light",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Light"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The sensation causes by the wine in the mouth when sipping it"
+    },
+    "id" : "23",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#TraditionalDishes",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TraditionalDishes"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Cocido",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Cocido"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Meals associated with confort food"
+    },
+    "id" : "32",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dishes"
+    },
+    "subClasses" : [ "35", "36", "32", "37" ],
+    "comment" : {
+      "undefined" : "Different courses made with various ingredients"
+    },
+    "id" : "33",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Wine",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Wine"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Bruto"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aquilon_Garnacha",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Aquilon_Garnacha"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Terras_Gauda_O_Rosal"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Toneles_Moscatel"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Alcoholic beverage made from fermented grape juice"
+    },
+    "id" : "16",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Desserts",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Desserts"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon_cake",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Lemon_cake"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry_cake",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Strawberry_cake"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Sweet meals"
+    },
+    "id" : "35",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#SweetFruit",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SweetFruit"
+    },
+    "subClasses" : [ "0", "68" ],
+    "comment" : {
+      "undefined" : "Fruits with sweet taste"
+    },
+    "id" : "1",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Region"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Ribera_del_Duero"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rias_Baixas",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Rias_Baixas"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jumilla",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Jumilla"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Toro"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Campo_de_Borja",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Campo_de_Borja"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jerez-Xeres-Sherry",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Jerez-Xeres-Sherry"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Geographical delimitations"
+    },
+    "id" : "44"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#GranReserva",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GranReserva"
+    },
+    "comment" : {
+      "undefined" : "Wines with at least 60 months of aging"
+    },
+    "id" : "83",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fowl",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fowl"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White_meats",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "White_meats"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "White meat like chicken, rabbit, etc."
+    },
+    "id" : "28",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineTaste",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WineTaste"
+    },
+    "subClasses" : [ "17", "70", "23" ],
+    "comment" : {
+      "undefined" : "Describes the flavour in terms of various aspects"
+    },
+    "id" : "24",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Edibles"
+    },
+    "subClasses" : [ "28", "4", "3", "8", "14", "20" ],
+    "comment" : {
+      "undefined" : "Ingredients used for course meals"
+    },
+    "id" : "47",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#ItalianDishes",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ItalianDishes"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bolognese",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Bolognese"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Traditional italian course meals"
+    },
+    "id" : "37",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Excellent",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Excellent"
+    },
+    "comment" : {
+      "undefined" : "Items with puntuation higher or equal than 4 out of 5"
+    },
+    "id" : "50",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Aging_of_wine",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Aging"
+    },
+    "subClasses" : [ "12", "10", "83" ],
+    "comment" : {
+      "undefined" : "This class provides information about the wine's aging"
+    },
+    "id" : "11",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Winery",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Winery"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro_Albala",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Toro_Albala"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Valdespino",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Valdespino"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Alto_Moncayo",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Alto_Moncayo"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Altos_de_Rioja",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Altos_de_Rioja"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Juan_Gil",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Juan_Gil"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Terras_Gauda"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Wine makers"
+    },
+    "id" : "53"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Seafood"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Shellfish",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Shellfish"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Shellfish or seafish, excludes sweet water fish"
+    },
+    "id" : "14",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Soups",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Soups"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood_soup",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Seafood_soup"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Meals with liquid consistence"
+    },
+    "id" : "36",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Drinkables",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Drinkables"
+    },
+    "subClasses" : [ "16" ],
+    "comment" : {
+      "undefined" : "Drinks and simmilar"
+    },
+    "id" : "40",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WineFlavour"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strong",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Strong"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moderate",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Moderate"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Delicate",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Delicate"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The flavours that can be appreciated when tasting the wine"
+    },
+    "id" : "70",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Strawberry"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Camarosa",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Camarosa"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Sweet tasting berry, red in colour"
+    },
+    "id" : "68",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WineType"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrel",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Monastrel"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sherry",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Sherry"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero_Red",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Ribera_del_Duero_Red"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Albariño",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Albariño"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grenache",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Grenache"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Chardonnay",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Chardonnay"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Types of wine, depending of grapes used in the preparation"
+    },
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Consumables"
+    },
+    "subClasses" : [ "47", "33", "40" ],
+    "comment" : {
+      "undefined" : "Everything that is able for consumption"
+    },
+    "id" : "34"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Meat",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Meat"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red_meats",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Red_meats"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Red meats like beef or pig"
+    },
+    "id" : "20",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WineSugar"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#OffDry",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "OffDry"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sweet",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Sweet"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dry",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Dry"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Describes the sweetness of the wine"
+    },
+    "id" : "17",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Pasta",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Pasta"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Spaguetti",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Spaguetti"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Starchy food asociated with italian cuisine"
+    },
+    "id" : "3",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rating",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rating"
+    },
+    "subClasses" : [ "50", "51" ],
+    "comment" : {
+      "undefined" : "Mean puntuation obtained from customers"
+    },
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fruit",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fruit"
+    },
+    "subClasses" : [ "7", "1" ],
+    "comment" : {
+      "undefined" : "Vegetables with pulp arount the seed(s)"
+    },
+    "id" : "8",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Good",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Good"
+    },
+    "comment" : {
+      "undefined" : "Items with puntuation higher between 3 and 3.99 out of 5"
+    },
+    "id" : "51",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Lemon"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Feminello",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Feminello"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Sour tasting yellow fruit"
+    },
+    "id" : "9",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WineCharasteristics"
+    },
+    "subClasses" : [ "24", "5", "11" ],
+    "comment" : {
+      "undefined" : "This class collects the properties needed to describe wine in terms of flavour and aspect"
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Vegetables",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vegetables"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Carrot",
+      "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+      "labels" : {
+        "IRI-based" : "Carrot"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Other kind of vegetables"
+    },
+    "id" : "4",
+    "superClasses" : [ "47" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "13",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "21",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "22",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "25",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "26",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "27",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "29",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "30",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "31",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "42",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "46",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "48",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "49",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "52",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "58",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "89",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "90",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "91",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "114",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "115",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "116",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "117",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "118",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "122",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "2"
+  }, {
+    "range" : "14",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasSugar",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasSugar"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Wine's sweetnes, can be dry, offdry or sweet"
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "range" : "4",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "range" : "14",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "14",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "3",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "4",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "14",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "3",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "20",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWine",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasWine"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Provides the wines made by each winery"
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "range" : "20",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "8",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRegion",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "hasRegion"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Provides the region where the wine was produced"
+    },
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
+    "range" : "3",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "range" : "47",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "47",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "51",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasMaker",
+    "inverse" : "54",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "hasMaker"
+    },
+    "domain" : "40",
+    "comment" : {
+      "undefined" : "Associates each wine with its correspondering winery"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRating",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "hasRating"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Numerical mean rating between 1.0 and 5.0"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "range" : "37",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "40",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasBody",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasBody"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The wine body can be light, medium or full"
+    },
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "range" : "36",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "47",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "47",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasConservationTemperature",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "hasConservationTemperature"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Recommended preservation temperature for the wine as given by its maker"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "range" : "47",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasYears",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "hasYears"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Wine's aging years"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFlavour",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "hasFlavour"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The wine flavour can be delicate, moderate or strong"
+    },
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "range" : "24",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "24",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
+  }, {
+    "range" : "47",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "24",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "33",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "1",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasType",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Used to associated each wine with its corresponding type"
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#usedToPrepare",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "usedToPrepare"
+    },
+    "domain" : "47",
+    "comment" : {
+      "undefined" : "Provides information about the courses that can be made with each food"
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "33",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "33",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFood",
+    "inverse" : "79",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasFood"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "Provides information about the ingredients used for each course"
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "range" : "68",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "4",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "range" : "1",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "36",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#locatedIn",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "locatedIn"
+    },
+    "domain" : "53",
+    "comment" : {
+      "undefined" : "Inverse of hasWinery"
+    },
+    "attributes" : [ "object" ],
+    "id" : "92"
+  }, {
+    "range" : "6",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "8",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeWithGrape",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "madeWithGrape"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Provides information about the grape(s) used to make a given wine"
+    },
+    "attributes" : [ "object" ],
+    "id" : "97"
+  }, {
+    "range" : "6",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "range" : "34",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "34",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "100"
+  }, {
+    "range" : "87",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "range" : "87",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasCharacteristics"
+    },
+    "domain" : "16",
+    "subproperty" : [ "15", "103", "69", "59" ],
+    "comment" : {
+      "undefined" : "Provides information about the wine's organoleptic properties"
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#makesWine",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "makesWine"
+    },
+    "domain" : "53",
+    "comment" : {
+      "undefined" : "Provides the list of wines made by a given winery"
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "range" : "40",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "range" : "11",
+    "domain" : "83",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "range" : "34",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "106"
+  }, {
+    "range" : "47",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "107"
+  }, {
+    "range" : "47",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "range" : "11",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasAging",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasAging"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Provides information about the wine aging category"
+    },
+    "attributes" : [ "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWinery",
+    "inverse" : "92",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "hasWinery"
+    },
+    "domain" : "44",
+    "comment" : {
+      "undefined" : "Associates each winery with its region"
+    },
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "range" : "39",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "53",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "6",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "range" : "39",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "53",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "range" : "39",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "53",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "range" : "53",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasColour",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasColour"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The wine colour can be red, rose or white"
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "range" : "44",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "6",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasDesignation",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasDesignation"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Provides information about wine's origin designation"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasMaker",
+    "inverse" : "54",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "hasMaker"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Associates each wine with its correspondering winery"
+    },
+    "attributes" : [ "object" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeIntoWine",
+    "inverse" : "97",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "madeIntoWine"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "Provides information about the wines made from a given grape"
+    },
+    "attributes" : [ "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasPairing",
+    "baseIri" : "http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasPairing"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "Provides recommendations for food and wine pairing"
+    },
+    "attributes" : [ "object" ],
+    "id" : "126"
+  } ]
+}
