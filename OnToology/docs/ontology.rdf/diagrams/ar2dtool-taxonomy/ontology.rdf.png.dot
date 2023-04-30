@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "pec2_rc_wine_ontology:Crianza" "pec2_rc_wine_ontology:WineTaste" "pec2_rc_wine_ontology:NonSweetFruit" "pec2_rc_wine_ontology:Lemon" "pec2_rc_wine_ontology:Soups" "pec2_rc_wine_ontology:Rating" "pec2_rc_wine_ontology:ItalianDishes" "pec2_rc_wine_ontology:Edibles" "pec2_rc_wine_ontology:WineCharasteristics" "pec2_rc_wine_ontology:Meat" "pec2_rc_wine_ontology:WineFlavour" "pec2_rc_wine_ontology:WineSugar" "pec2_rc_wine_ontology:TraditionalDishes" "pec2_rc_wine_ontology:Good" "pec2_rc_wine_ontology:Drinkables" "pec2_rc_wine_ontology:Dishes" "pec2_rc_wine_ontology:Seafood" "pec2_rc_wine_ontology:Fowl" "pec2_rc_wine_ontology:Reserva" "pec2_rc_wine_ontology:Grape" "pec2_rc_wine_ontology:Pasta" "pec2_rc_wine_ontology:Strawberry" "pec2_rc_wine_ontology:Excellent" "pec2_rc_wine_ontology:Desserts" "pec2_rc_wine_ontology:Vegetables" "pec2_rc_wine_ontology:SweetFruit" "pec2_rc_wine_ontology:Aging" "pec2_rc_wine_ontology:Fruit" "pec2_rc_wine_ontology:Wine" "pec2_rc_wine_ontology:WineColour" "pec2_rc_wine_ontology:GranReserva" "pec2_rc_wine_ontology:WineBody" "pec2_rc_wine_ontology:Consumables" ; /*classes style*/
+	"pec2_rc_wine_ontology:Grape" -> "pec2_rc_wine_ontology:SweetFruit" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:GranReserva" -> "pec2_rc_wine_ontology:Aging" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:WineColour" -> "pec2_rc_wine_ontology:WineCharasteristics" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Good" -> "pec2_rc_wine_ontology:Rating" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:WineSugar" -> "pec2_rc_wine_ontology:WineTaste" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Crianza" -> "pec2_rc_wine_ontology:Aging" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Fowl" -> "pec2_rc_wine_ontology:Edibles" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Seafood" -> "pec2_rc_wine_ontology:Edibles" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Reserva" -> "pec2_rc_wine_ontology:Aging" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Pasta" -> "pec2_rc_wine_ontology:Edibles" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Meat" -> "pec2_rc_wine_ontology:Edibles" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:WineFlavour" -> "pec2_rc_wine_ontology:WineTaste" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Dishes" -> "pec2_rc_wine_ontology:Consumables" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Lemon" -> "pec2_rc_wine_ontology:NonSweetFruit" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Drinkables" -> "pec2_rc_wine_ontology:Consumables" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Edibles" -> "pec2_rc_wine_ontology:Consumables" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:NonSweetFruit" -> "pec2_rc_wine_ontology:Fruit" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Wine" -> "pec2_rc_wine_ontology:Drinkables" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Vegetables" -> "pec2_rc_wine_ontology:Edibles" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Aging" -> "pec2_rc_wine_ontology:WineCharasteristics" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Desserts" -> "pec2_rc_wine_ontology:Dishes" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Strawberry" -> "pec2_rc_wine_ontology:SweetFruit" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Excellent" -> "pec2_rc_wine_ontology:Rating" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:SweetFruit" -> "pec2_rc_wine_ontology:Fruit" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:TraditionalDishes" -> "pec2_rc_wine_ontology:Dishes" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Soups" -> "pec2_rc_wine_ontology:Dishes" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:Fruit" -> "pec2_rc_wine_ontology:Edibles" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:WineBody" -> "pec2_rc_wine_ontology:WineTaste" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:WineTaste" -> "pec2_rc_wine_ontology:WineCharasteristics" [ label = "rdfs:subClassOf" ];
+	"pec2_rc_wine_ontology:ItalianDishes" -> "pec2_rc_wine_ontology:Dishes" [ label = "rdfs:subClassOf" ];
+
+}
