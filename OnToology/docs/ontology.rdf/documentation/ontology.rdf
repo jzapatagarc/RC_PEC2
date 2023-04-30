@@ -1,0 +1,1579 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#"
+     xml:base="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:pec2_rc_wine_ontology="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology">
+        <terms:license>http://purl.org/NET/rdflicense/cc-by4.0</terms:license>
+        <terms:title>Wine Ontology PEC2</terms:title>
+        <rdfs:comment>Wine Ontology for Recommendation System
+Authors: Yago Estévez Davila, José David Zapata García</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasAging -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasAging">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging"/>
+        <rdfs:comment>Provides information about the wine aging category</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasBody -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasBody">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody"/>
+        <rdfs:comment>The wine body can be light, medium or full</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics"/>
+        <rdfs:comment>Provides information about the wine&apos;s organoleptic properties</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasColour -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasColour">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour"/>
+        <rdfs:comment>The wine colour can be red, rose or white</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFlavour -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFlavour">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour"/>
+        <rdfs:comment>The wine flavour can be delicate, moderate or strong</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFood -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFood">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#usedToPrepare"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:comment>Provides information about the ingredients used for each course</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasMaker -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasMaker">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#makesWine"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <rdfs:comment>Associates each wine with its correspondering winery</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasPairing -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasPairing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:comment>Provides recommendations for food and wine pairing</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRegion -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRegion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+        <rdfs:comment>Provides the region where the wine was produced</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasSugar -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasSugar">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar"/>
+        <rdfs:comment>Wine&apos;s sweetnes, can be dry, offdry or sweet</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+        <rdfs:comment>Used to associated each wine with its corresponding type</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWine -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:comment>Provides the wines made by each winery</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWinery -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWinery">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#locatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <rdfs:comment>Associates each winery with its region</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#locatedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+        <rdfs:comment>Inverse of hasWinery</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeIntoWine -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeIntoWine">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeWithGrape"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:comment>Provides information about the wines made from a given grape</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeWithGrape -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeWithGrape">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape"/>
+        <rdfs:comment>Provides information about the grape(s) used to make a given wine</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#makesWine -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#makesWine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:comment>Provides the list of wines made by a given winery</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#usedToPrepare -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#usedToPrepare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+        <rdfs:comment>Provides information about the courses that can be made with each food</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasConservationTemperature -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasConservationTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Recommended preservation temperature for the wine as given by its maker</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasDesignation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasDesignation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Provides information about wine&apos;s origin designation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Numerical mean rating between 1.0 and 5.0</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasYears -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasYears">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Wine&apos;s aging years</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics"/>
+        <sameAs>https://dbpedia.org/page/Aging_of_wine</sameAs>
+        <rdfs:comment>This class provides information about the wine&apos;s aging</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables">
+        <rdfs:comment>Everything that is able for consumption</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Crianza -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Crianza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging"/>
+        <rdfs:comment>These wines usually have 24 or less months of aging</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Desserts -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Desserts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#ItalianDishes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Soups"/>
+        <rdfs:comment>Sweet meals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables"/>
+        <rdfs:comment>Different courses made with various ingredients</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Drinkables -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Drinkables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasMaker"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasYears"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Drinks and simmilar</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables"/>
+        <rdfs:comment>Ingredients used for course meals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Excellent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Excellent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rating"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Good"/>
+        <rdfs:comment>Items with puntuation higher or equal than 4 out of 5</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fowl -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fowl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:comment>White meat like chicken, rabbit, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fruit -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:comment>Vegetables with pulp arount the seed(s)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Good -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Good">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rating"/>
+        <rdfs:comment>Items with puntuation higher between 3 and 3.99 out of 5</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#GranReserva -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#GranReserva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging"/>
+        <rdfs:comment>Wines with at least 60 months of aging</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#SweetFruit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry"/>
+        <sameAs>https://dbpedia.org/page/Grape</sameAs>
+        <rdfs:comment>Fruit used to make wine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#ItalianDishes -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#ItalianDishes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Soups"/>
+        <rdfs:comment>Traditional italian course meals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#NonSweetFruit"/>
+        <rdfs:comment>Sour tasting yellow fruit</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Meat -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:comment>Red meats like beef or pig</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#NonSweetFruit -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#NonSweetFruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fruit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#SweetFruit"/>
+        <rdfs:comment>Fruits with a sour or acid taste</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Pasta -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Pasta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:comment>Starchy food asociated with italian cuisine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rating">
+        <rdfs:comment>Mean puntuation obtained from customers</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region">
+        <rdfs:comment>Geographical delimitations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Reserva -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Reserva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging"/>
+        <rdfs:comment>These wines have been aged between 25 and 59 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:comment>Shellfish or seafish, excludes sweet water fish</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Soups -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Soups">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+        <rdfs:comment>Meals with liquid consistence</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#SweetFruit"/>
+        <rdfs:comment>Sweet tasting berry, red in colour</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#SweetFruit -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#SweetFruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fruit"/>
+        <rdfs:comment>Fruits with sweet taste</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#TraditionalDishes -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#TraditionalDishes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+        <rdfs:comment>Meals associated with confort food</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Vegetables -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Vegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        <rdfs:comment>Other kind of vegetables</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Drinkables"/>
+        <sameAs>https://dbpedia.org/page/Wine</sameAs>
+        <rdfs:comment>Alcoholic beverage made from fermented grape juice</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineTaste"/>
+        <rdfs:comment>The sensation causes by the wine in the mouth when sipping it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics">
+        <rdfs:comment>This class collects the properties needed to describe wine in terms of flavour and aspect</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics"/>
+        <rdfs:comment>Wine&apos;s visual qualities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineTaste"/>
+        <rdfs:comment>The flavours that can be appreciated when tasting the wine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineTaste"/>
+        <rdfs:comment>Describes the sweetness of the wine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineTaste -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineTaste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics"/>
+        <rdfs:comment>Describes the flavour in terms of various aspects</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType">
+        <rdfs:comment>Types of wine, depending of grapes used in the preparation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery">
+        <sameAs>https://dbpedia.org/page/Winery</sameAs>
+        <rdfs:comment>Wine makers</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Albariño -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Albariño">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+        <hasWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Alto_Moncayo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Alto_Moncayo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <locatedIn rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Campo_de_Borja"/>
+        <makesWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aquilon_Garnacha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Altos_de_Rioja -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Altos_de_Rioja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aquilon_Garnacha -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aquilon_Garnacha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Full"/>
+        <hasColour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red"/>
+        <hasFlavour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strong"/>
+        <hasMaker rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Alto_Moncayo"/>
+        <hasRegion rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Campo_de_Borja"/>
+        <hasSugar rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dry"/>
+        <hasType rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grenache"/>
+        <madeWithGrape rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Garnacha"/>
+        <hasConservationTemperature>16C</hasConservationTemperature>
+        <hasDesignation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasDesignation>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</hasRating>
+        <hasYears rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</hasYears>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bolognese -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bolognese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#ItalianDishes"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Spaguetti"/>
+        <hasPairing rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Full"/>
+        <hasColour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red"/>
+        <hasFlavour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moderate"/>
+        <hasMaker rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Juan_Gil"/>
+        <hasRegion rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jumilla"/>
+        <hasSugar rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dry"/>
+        <hasType rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrel"/>
+        <madeWithGrape rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrell"/>
+        <hasConservationTemperature>16C</hasConservationTemperature>
+        <hasDesignation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasDesignation>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</hasRating>
+        <hasYears rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</hasYears>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Caiño_blanco -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Caiño_blanco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape"/>
+        <madeIntoWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Camarosa -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Camarosa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry"/>
+        <usedToPrepare rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry_cake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Campo_de_Borja -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Campo_de_Borja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+        <hasWinery rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Alto_Moncayo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Carrot -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Carrot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Vegetables"/>
+        <usedToPrepare rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Cocido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Chardonnay -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Chardonnay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Cocido -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Cocido">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#TraditionalDishes"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Carrot"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red_meats"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White_meats"/>
+        <hasPairing rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Delicate -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Delicate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dry -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Feminello -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Feminello">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon"/>
+        <usedToPrepare rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon_cake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Full -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Full">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Garnacha -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Garnacha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape"/>
+        <madeIntoWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aquilon_Garnacha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grenache -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grenache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+        <hasWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aquilon_Garnacha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jerez-Xeres-Sherry -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jerez-Xeres-Sherry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+        <hasWinery rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Valdespino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Juan_Gil -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Juan_Gil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <locatedIn rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jumilla"/>
+        <makesWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jumilla -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jumilla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+        <hasWinery rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Juan_Gil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon_cake -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon_cake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Desserts"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Feminello"/>
+        <hasPairing rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Light -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Light">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Loureiro -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Loureiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape"/>
+        <madeIntoWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Medium -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Medium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moderate -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moderate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrel -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+        <hasWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrell -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape"/>
+        <madeIntoWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moscatel_de_Alejandría -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moscatel_de_Alejandría">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape"/>
+        <madeIntoWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#OffDry -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#OffDry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red_meats -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red_meats">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Meat"/>
+        <usedToPrepare rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Cocido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rias_Baixas -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rias_Baixas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+        <hasWinery rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero_Red -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero_Red">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rose -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood_soup -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood_soup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Soups"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Shellfish"/>
+        <hasPairing rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Shellfish -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Shellfish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood"/>
+        <usedToPrepare rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood_soup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sherry -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sherry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+        <hasWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Spaguetti -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Spaguetti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Pasta"/>
+        <usedToPrepare rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bolognese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry_cake -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry_cake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Desserts"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Camarosa"/>
+        <hasPairing rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strong -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sweet -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sweet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <locatedIn rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rias_Baixas"/>
+        <makesWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Medium"/>
+        <hasColour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White"/>
+        <hasFlavour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strong"/>
+        <hasMaker rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda"/>
+        <hasRegion rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rias_Baixas"/>
+        <hasSugar rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dry"/>
+        <hasType rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Albariño"/>
+        <madeWithGrape rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Caiño_blanco"/>
+        <madeWithGrape rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Loureiro"/>
+        <hasConservationTemperature>10C</hasConservationTemperature>
+        <hasDesignation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasDesignation>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</hasRating>
+        <hasYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasYears>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+        <hasBody rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Medium"/>
+        <hasColour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rose"/>
+        <hasFlavour rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moderate"/>
+        <hasMaker rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Valdespino"/>
+        <hasRegion rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jerez-Xeres-Sherry"/>
+        <hasSugar rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sweet"/>
+        <hasType rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sherry"/>
+        <madeWithGrape rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moscatel_de_Alejandría"/>
+        <hasConservationTemperature>15C</hasConservationTemperature>
+        <hasDesignation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasDesignation>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</hasRating>
+        <hasYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasYears>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro_Albala -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro_Albala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Valdespino -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Valdespino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        <locatedIn rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jerez-Xeres-Sherry"/>
+        <makesWine rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White_meats -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White_meats">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fowl"/>
+        <usedToPrepare rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Cocido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Drinkables"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fowl"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fruit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Meat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Pasta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Vegetables"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#hd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRegion"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#hd"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasDesignation"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#hd"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasDesignation"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="urn:swrl:var#r"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Excellent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="urn:swrl:var#w"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.99</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="urn:swrl:var#r"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRating"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Good"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

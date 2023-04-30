@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:Crianza" "base:WineTaste" "base:NonSweetFruit" "base:Lemon" "base:Soups" "base:Rating" "base:ItalianDishes" "base:Edibles" "base:WineCharasteristics" "base:Meat" "base:WineFlavour" "base:WineSugar" "base:TraditionalDishes" "base:Good" "base:Drinkables" "base:Dishes" "base:Seafood" "base:Fowl" "base:Reserva" "base:Grape" "base:Pasta" "base:Strawberry" "base:Excellent" "base:Desserts" "base:Vegetables" "base:SweetFruit" "base:Aging" "base:Fruit" "base:Wine" "base:WineColour" "base:GranReserva" "base:WineBody" "base:Consumables" ; /*classes style*/
+	"base:Grape" -> "base:SweetFruit" [ label = "rdfs:subClassOf" ];
+	"base:GranReserva" -> "base:Aging" [ label = "rdfs:subClassOf" ];
+	"base:WineColour" -> "base:WineCharasteristics" [ label = "rdfs:subClassOf" ];
+	"base:Good" -> "base:Rating" [ label = "rdfs:subClassOf" ];
+	"base:WineSugar" -> "base:WineTaste" [ label = "rdfs:subClassOf" ];
+	"base:Crianza" -> "base:Aging" [ label = "rdfs:subClassOf" ];
+	"base:Fowl" -> "base:Edibles" [ label = "rdfs:subClassOf" ];
+	"base:Seafood" -> "base:Edibles" [ label = "rdfs:subClassOf" ];
+	"base:Reserva" -> "base:Aging" [ label = "rdfs:subClassOf" ];
+	"base:Pasta" -> "base:Edibles" [ label = "rdfs:subClassOf" ];
+	"base:Meat" -> "base:Edibles" [ label = "rdfs:subClassOf" ];
+	"base:WineFlavour" -> "base:WineTaste" [ label = "rdfs:subClassOf" ];
+	"base:Dishes" -> "base:Consumables" [ label = "rdfs:subClassOf" ];
+	"base:Lemon" -> "base:NonSweetFruit" [ label = "rdfs:subClassOf" ];
+	"base:Drinkables" -> "base:Consumables" [ label = "rdfs:subClassOf" ];
+	"base:Edibles" -> "base:Consumables" [ label = "rdfs:subClassOf" ];
+	"base:NonSweetFruit" -> "base:Fruit" [ label = "rdfs:subClassOf" ];
+	"base:Wine" -> "base:Drinkables" [ label = "rdfs:subClassOf" ];
+	"base:Vegetables" -> "base:Edibles" [ label = "rdfs:subClassOf" ];
+	"base:Aging" -> "base:WineCharasteristics" [ label = "rdfs:subClassOf" ];
+	"base:Desserts" -> "base:Dishes" [ label = "rdfs:subClassOf" ];
+	"base:Strawberry" -> "base:SweetFruit" [ label = "rdfs:subClassOf" ];
+	"base:Excellent" -> "base:Rating" [ label = "rdfs:subClassOf" ];
+	"base:SweetFruit" -> "base:Fruit" [ label = "rdfs:subClassOf" ];
+	"base:TraditionalDishes" -> "base:Dishes" [ label = "rdfs:subClassOf" ];
+	"base:Soups" -> "base:Dishes" [ label = "rdfs:subClassOf" ];
+	"base:Fruit" -> "base:Edibles" [ label = "rdfs:subClassOf" ];
+	"base:WineBody" -> "base:WineTaste" [ label = "rdfs:subClassOf" ];
+	"base:WineTaste" -> "base:WineCharasteristics" [ label = "rdfs:subClassOf" ];
+	"base:ItalianDishes" -> "base:Dishes" [ label = "rdfs:subClassOf" ];
+
+}

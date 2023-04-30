@@ -1,0 +1,953 @@
+@prefix : <http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#> .
+
+<http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology> rdf:type owl:Ontology ;
+                                                                            <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                                                            <http://purl.org/dc/terms/title> "Wine Ontology PEC2" ;
+                                                                            rdfs:comment """Wine Ontology for Recommendation System
+Authors: Yago Estévez Davila, José David Zapata García""" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#sameAs
+:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasAging
+:hasAging rdf:type owl:ObjectProperty ;
+          rdfs:domain :Wine ;
+          rdfs:range :Aging ;
+          rdfs:comment "Provides information about the wine aging category" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasBody
+:hasBody rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasCharacteristics ;
+         rdfs:domain :Wine ;
+         rdfs:range :WineBody ;
+         rdfs:comment "The wine body can be light, medium or full" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasCharacteristics
+:hasCharacteristics rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Wine ;
+                    rdfs:range :WineCharasteristics ;
+                    rdfs:comment "Provides information about the wine's organoleptic properties" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasColour
+:hasColour rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasCharacteristics ;
+           rdfs:domain :Wine ;
+           rdfs:range :WineColour ;
+           rdfs:comment "The wine colour can be red, rose or white" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFlavour
+:hasFlavour rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasCharacteristics ;
+            rdfs:domain :Wine ;
+            rdfs:range :WineFlavour ;
+            rdfs:comment "The wine flavour can be delicate, moderate or strong" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasFood
+:hasFood rdf:type owl:ObjectProperty ;
+         owl:inverseOf :usedToPrepare ;
+         rdfs:domain :Dishes ;
+         rdfs:range :Edibles ;
+         rdfs:comment "Provides information about the ingredients used for each course" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasMaker
+:hasMaker rdf:type owl:ObjectProperty ;
+          owl:inverseOf :makesWine ;
+          rdfs:domain :Wine ;
+          rdfs:range :Winery ;
+          rdfs:comment "Associates each wine with its correspondering winery" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasPairing
+:hasPairing rdf:type owl:ObjectProperty ;
+            rdfs:domain :Dishes ;
+            rdfs:range :Wine ;
+            rdfs:comment "Provides recommendations for food and wine pairing" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRegion
+:hasRegion rdf:type owl:ObjectProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range :Region ;
+           rdfs:comment "Provides the region where the wine was produced" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasSugar
+:hasSugar rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasCharacteristics ;
+          rdfs:domain :Wine ;
+          rdfs:range :WineSugar ;
+          rdfs:comment "Wine's sweetnes, can be dry, offdry or sweet" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasType
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range :WineType ;
+         rdfs:comment "Used to associated each wine with its corresponding type" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWine
+:hasWine rdf:type owl:ObjectProperty ;
+         rdfs:domain :WineType ;
+         rdfs:range :Wine ;
+         rdfs:comment "Provides the wines made by each winery" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasWinery
+:hasWinery rdf:type owl:ObjectProperty ;
+           owl:inverseOf :locatedIn ;
+           rdfs:domain :Region ;
+           rdfs:range :Winery ;
+           rdfs:comment "Associates each winery with its region" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Winery ;
+           rdfs:range :Region ;
+           rdfs:comment "Inverse of hasWinery" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeIntoWine
+:madeIntoWine rdf:type owl:ObjectProperty ;
+              owl:inverseOf :madeWithGrape ;
+              rdfs:domain :Grape ;
+              rdfs:range :Wine ;
+              rdfs:comment "Provides information about the wines made from a given grape" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#madeWithGrape
+:madeWithGrape rdf:type owl:ObjectProperty ;
+               rdfs:domain :Wine ;
+               rdfs:range :Grape ;
+               rdfs:comment "Provides information about the grape(s) used to make a given wine" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#makesWine
+:makesWine rdf:type owl:ObjectProperty ;
+           rdfs:domain :Winery ;
+           rdfs:range :Wine ;
+           rdfs:comment "Provides the list of wines made by a given winery" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#usedToPrepare
+:usedToPrepare rdf:type owl:ObjectProperty ;
+               rdfs:domain :Edibles ;
+               rdfs:range :Dishes ;
+               rdfs:comment "Provides information about the courses that can be made with each food" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasConservationTemperature
+:hasConservationTemperature rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Wine ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Recommended preservation temperature for the wine as given by its maker" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasDesignation
+:hasDesignation rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Wine ;
+                rdfs:range xsd:boolean ;
+                rdfs:comment "Provides information about wine's origin designation" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasRating
+:hasRating rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range xsd:float ;
+           rdfs:comment "Numerical mean rating between 1.0 and 5.0" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#hasYears
+:hasYears rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Wine ;
+          rdfs:range xsd:int ;
+          rdfs:comment "Wine's aging years" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aging
+:Aging rdf:type owl:Class ;
+       rdfs:subClassOf :WineCharasteristics ;
+       :sameAs "https://dbpedia.org/page/Aging_of_wine" ;
+       rdfs:comment "This class provides information about the wine's aging" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Consumables
+:Consumables rdf:type owl:Class ;
+             rdfs:comment "Everything that is able for consumption" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Crianza
+:Crianza rdf:type owl:Class ;
+         rdfs:subClassOf :Aging ;
+         rdfs:comment "These wines usually have 24 or less months of aging" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Desserts
+:Desserts rdf:type owl:Class ;
+          rdfs:subClassOf :Dishes ;
+          owl:disjointWith :ItalianDishes ,
+                           :Soups ;
+          rdfs:comment "Sweet meals" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dishes
+:Dishes rdf:type owl:Class ;
+        rdfs:subClassOf :Consumables ;
+        rdfs:comment "Different courses made with various ingredients" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Drinkables
+:Drinkables rdf:type owl:Class ;
+            rdfs:subClassOf :Consumables ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasMaker ;
+                              owl:allValuesFrom :Winery
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasYears ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:int
+                            ] ;
+            rdfs:comment "Drinks and simmilar" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Edibles
+:Edibles rdf:type owl:Class ;
+         rdfs:subClassOf :Consumables ;
+         rdfs:comment "Ingredients used for course meals" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Excellent
+:Excellent rdf:type owl:Class ;
+           rdfs:subClassOf :Rating ;
+           owl:disjointWith :Good ;
+           rdfs:comment "Items with puntuation higher or equal than 4 out of 5" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fowl
+:Fowl rdf:type owl:Class ;
+      rdfs:subClassOf :Edibles ;
+      rdfs:comment "White meat like chicken, rabbit, etc." .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Fruit
+:Fruit rdf:type owl:Class ;
+       rdfs:subClassOf :Edibles ;
+       rdfs:comment "Vegetables with pulp arount the seed(s)" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Good
+:Good rdf:type owl:Class ;
+      rdfs:subClassOf :Rating ;
+      rdfs:comment "Items with puntuation higher between 3 and 3.99 out of 5" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#GranReserva
+:GranReserva rdf:type owl:Class ;
+             rdfs:subClassOf :Aging ;
+             rdfs:comment "Wines with at least 60 months of aging" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grape
+:Grape rdf:type owl:Class ;
+       rdfs:subClassOf :SweetFruit ;
+       owl:disjointWith :Strawberry ;
+       :sameAs "https://dbpedia.org/page/Grape" ;
+       rdfs:comment "Fruit used to make wine" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#ItalianDishes
+:ItalianDishes rdf:type owl:Class ;
+               rdfs:subClassOf :Dishes ;
+               owl:disjointWith :Soups ;
+               rdfs:comment "Traditional italian course meals" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon
+:Lemon rdf:type owl:Class ;
+       rdfs:subClassOf :NonSweetFruit ;
+       rdfs:comment "Sour tasting yellow fruit" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Meat
+:Meat rdf:type owl:Class ;
+      rdfs:subClassOf :Edibles ;
+      rdfs:comment "Red meats like beef or pig" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#NonSweetFruit
+:NonSweetFruit rdf:type owl:Class ;
+               rdfs:subClassOf :Fruit ;
+               owl:disjointWith :SweetFruit ;
+               rdfs:comment "Fruits with a sour or acid taste" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Pasta
+:Pasta rdf:type owl:Class ;
+       rdfs:subClassOf :Edibles ;
+       rdfs:comment "Starchy food asociated with italian cuisine" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:comment "Mean puntuation obtained from customers" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Region
+:Region rdf:type owl:Class ;
+        rdfs:comment "Geographical delimitations" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Reserva
+:Reserva rdf:type owl:Class ;
+         rdfs:subClassOf :Aging ;
+         rdfs:comment "These wines have been aged between 25 and 59 months" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood
+:Seafood rdf:type owl:Class ;
+         rdfs:subClassOf :Edibles ;
+         rdfs:comment "Shellfish or seafish, excludes sweet water fish" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Soups
+:Soups rdf:type owl:Class ;
+       rdfs:subClassOf :Dishes ;
+       rdfs:comment "Meals with liquid consistence" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry
+:Strawberry rdf:type owl:Class ;
+            rdfs:subClassOf :SweetFruit ;
+            rdfs:comment "Sweet tasting berry, red in colour" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#SweetFruit
+:SweetFruit rdf:type owl:Class ;
+            rdfs:subClassOf :Fruit ;
+            rdfs:comment "Fruits with sweet taste" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#TraditionalDishes
+:TraditionalDishes rdf:type owl:Class ;
+                   rdfs:subClassOf :Dishes ;
+                   rdfs:comment "Meals associated with confort food" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Vegetables
+:Vegetables rdf:type owl:Class ;
+            rdfs:subClassOf :Edibles ;
+            rdfs:comment "Other kind of vegetables" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:subClassOf :Drinkables ;
+      :sameAs "https://dbpedia.org/page/Wine" ;
+      rdfs:comment "Alcoholic beverage made from fermented grape juice" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineBody
+:WineBody rdf:type owl:Class ;
+          rdfs:subClassOf :WineTaste ;
+          rdfs:comment "The sensation causes by the wine in the mouth when sipping it" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineCharasteristics
+:WineCharasteristics rdf:type owl:Class ;
+                     rdfs:comment "This class collects the properties needed to describe wine in terms of flavour and aspect" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineColour
+:WineColour rdf:type owl:Class ;
+            rdfs:subClassOf :WineCharasteristics ;
+            rdfs:comment "Wine's visual qualities" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineFlavour
+:WineFlavour rdf:type owl:Class ;
+             rdfs:subClassOf :WineTaste ;
+             rdfs:comment "The flavours that can be appreciated when tasting the wine" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineSugar
+:WineSugar rdf:type owl:Class ;
+           rdfs:subClassOf :WineTaste ;
+           rdfs:comment "Describes the sweetness of the wine" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineTaste
+:WineTaste rdf:type owl:Class ;
+           rdfs:subClassOf :WineCharasteristics ;
+           rdfs:comment "Describes the flavour in terms of various aspects" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#WineType
+:WineType rdf:type owl:Class ;
+          rdfs:comment "Types of wine, depending of grapes used in the preparation" .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Winery
+:Winery rdf:type owl:Class ;
+        :sameAs "https://dbpedia.org/page/Winery" ;
+        rdfs:comment "Wine makers" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Albariño
+:Albariño rdf:type owl:NamedIndividual ,
+                   :WineType ;
+          :hasWine :Terras_Gauda_O_Rosal .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Alto_Moncayo
+:Alto_Moncayo rdf:type owl:NamedIndividual ,
+                       :Winery ;
+              :locatedIn :Campo_de_Borja ;
+              :makesWine :Aquilon_Garnacha .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Altos_de_Rioja
+:Altos_de_Rioja rdf:type owl:NamedIndividual ,
+                         :Winery .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Aquilon_Garnacha
+:Aquilon_Garnacha rdf:type owl:NamedIndividual ,
+                           :Wine ;
+                  :hasBody :Full ;
+                  :hasColour :Red ;
+                  :hasFlavour :Strong ;
+                  :hasMaker :Alto_Moncayo ;
+                  :hasRegion :Campo_de_Borja ;
+                  :hasSugar :Dry ;
+                  :hasType :Grenache ;
+                  :madeWithGrape :Garnacha ;
+                  :hasConservationTemperature "16C" ;
+                  :hasDesignation "true"^^xsd:boolean ;
+                  :hasRating "4.7"^^xsd:float ;
+                  :hasYears 7 .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bolognese
+:Bolognese rdf:type owl:NamedIndividual ,
+                    :ItalianDishes ;
+           :hasFood :Spaguetti ;
+           :hasPairing :Terras_Gauda_O_Rosal .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Bruto
+:Bruto rdf:type owl:NamedIndividual ,
+                :Wine ;
+       :hasBody :Full ;
+       :hasColour :Red ;
+       :hasFlavour :Moderate ;
+       :hasMaker :Juan_Gil ;
+       :hasRegion :Jumilla ;
+       :hasSugar :Dry ;
+       :hasType :Monastrel ;
+       :madeWithGrape :Monastrell ;
+       :hasConservationTemperature "16C" ;
+       :hasDesignation "true"^^xsd:boolean ;
+       :hasRating "4.5"^^xsd:float ;
+       :hasYears 6 .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Caiño_blanco
+:Caiño_blanco rdf:type owl:NamedIndividual ,
+                       :Grape ;
+              :madeIntoWine :Terras_Gauda_O_Rosal .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Camarosa
+:Camarosa rdf:type owl:NamedIndividual ,
+                   :Strawberry ;
+          :usedToPrepare :Strawberry_cake .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Campo_de_Borja
+:Campo_de_Borja rdf:type owl:NamedIndividual ,
+                         :Region ;
+                :hasWinery :Alto_Moncayo .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Carrot
+:Carrot rdf:type owl:NamedIndividual ,
+                 :Vegetables ;
+        :usedToPrepare :Cocido .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Chardonnay
+:Chardonnay rdf:type owl:NamedIndividual ,
+                     :WineType .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Cocido
+:Cocido rdf:type owl:NamedIndividual ,
+                 :TraditionalDishes ;
+        :hasFood :Carrot ,
+                 :Red_meats ,
+                 :White_meats ;
+        :hasPairing :Bruto .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Delicate
+:Delicate rdf:type owl:NamedIndividual ,
+                   :WineFlavour .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Dry
+:Dry rdf:type owl:NamedIndividual ,
+              :WineSugar .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Feminello
+:Feminello rdf:type owl:NamedIndividual ,
+                    :Lemon ;
+           :usedToPrepare :Lemon_cake .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Full
+:Full rdf:type owl:NamedIndividual ,
+               :WineBody .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Garnacha
+:Garnacha rdf:type owl:NamedIndividual ,
+                   :Grape ;
+          :madeIntoWine :Aquilon_Garnacha .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Grenache
+:Grenache rdf:type owl:NamedIndividual ,
+                   :WineType ;
+          :hasWine :Aquilon_Garnacha .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jerez-Xeres-Sherry
+:Jerez-Xeres-Sherry rdf:type owl:NamedIndividual ,
+                             :Region ;
+                    :hasWinery :Valdespino .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Juan_Gil
+:Juan_Gil rdf:type owl:NamedIndividual ,
+                   :Winery ;
+          :locatedIn :Jumilla ;
+          :makesWine :Bruto .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Jumilla
+:Jumilla rdf:type owl:NamedIndividual ,
+                  :Region ;
+         :hasWinery :Juan_Gil .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Lemon_cake
+:Lemon_cake rdf:type owl:NamedIndividual ,
+                     :Desserts ;
+            :hasFood :Feminello ;
+            :hasPairing :Toneles_Moscatel .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Light
+:Light rdf:type owl:NamedIndividual ,
+                :WineBody .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Loureiro
+:Loureiro rdf:type owl:NamedIndividual ,
+                   :Grape ;
+          :madeIntoWine :Terras_Gauda_O_Rosal .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Medium
+:Medium rdf:type owl:NamedIndividual ,
+                 :WineBody .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moderate
+:Moderate rdf:type owl:NamedIndividual ,
+                   :WineFlavour .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrel
+:Monastrel rdf:type owl:NamedIndividual ,
+                    :WineType ;
+           :hasWine :Bruto .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Monastrell
+:Monastrell rdf:type owl:NamedIndividual ,
+                     :Grape ;
+            :madeIntoWine :Bruto .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Moscatel_de_Alejandría
+:Moscatel_de_Alejandría rdf:type owl:NamedIndividual ,
+                                 :Grape ;
+                        :madeIntoWine :Toneles_Moscatel .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#OffDry
+:OffDry rdf:type owl:NamedIndividual ,
+                 :WineSugar .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red
+:Red rdf:type owl:NamedIndividual ,
+              :WineColour .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Red_meats
+:Red_meats rdf:type owl:NamedIndividual ,
+                    :Meat ;
+           :usedToPrepare :Cocido .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rias_Baixas
+:Rias_Baixas rdf:type owl:NamedIndividual ,
+                      :Region ;
+             :hasWinery :Terras_Gauda .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero
+:Ribera_del_Duero rdf:type owl:NamedIndividual ,
+                           :Region .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Ribera_del_Duero_Red
+:Ribera_del_Duero_Red rdf:type owl:NamedIndividual ,
+                               :WineType .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Rose
+:Rose rdf:type owl:NamedIndividual ,
+               :WineColour .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Seafood_soup
+:Seafood_soup rdf:type owl:NamedIndividual ,
+                       :Soups ;
+              :hasFood :Shellfish ;
+              :hasPairing :Terras_Gauda_O_Rosal .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Shellfish
+:Shellfish rdf:type owl:NamedIndividual ,
+                    :Seafood ;
+           :usedToPrepare :Seafood_soup .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sherry
+:Sherry rdf:type owl:NamedIndividual ,
+                 :WineType ;
+        :hasWine :Toneles_Moscatel .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Spaguetti
+:Spaguetti rdf:type owl:NamedIndividual ,
+                    :Pasta ;
+           :usedToPrepare :Bolognese .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strawberry_cake
+:Strawberry_cake rdf:type owl:NamedIndividual ,
+                          :Desserts ;
+                 :hasFood :Camarosa ;
+                 :hasPairing :Toneles_Moscatel .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Strong
+:Strong rdf:type owl:NamedIndividual ,
+                 :WineFlavour .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Sweet
+:Sweet rdf:type owl:NamedIndividual ,
+                :WineSugar .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda
+:Terras_Gauda rdf:type owl:NamedIndividual ,
+                       :Winery ;
+              :locatedIn :Rias_Baixas ;
+              :makesWine :Terras_Gauda_O_Rosal .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Terras_Gauda_O_Rosal
+:Terras_Gauda_O_Rosal rdf:type owl:NamedIndividual ,
+                               :Wine ;
+                      :hasBody :Medium ;
+                      :hasColour :White ;
+                      :hasFlavour :Strong ;
+                      :hasMaker :Terras_Gauda ;
+                      :hasRegion :Rias_Baixas ;
+                      :hasSugar :Dry ;
+                      :hasType :Albariño ;
+                      :madeWithGrape :Caiño_blanco ,
+                                     :Loureiro ;
+                      :hasConservationTemperature "10C" ;
+                      :hasDesignation "true"^^xsd:boolean ;
+                      :hasRating "4.3"^^xsd:float ;
+                      :hasYears 3 .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toneles_Moscatel
+:Toneles_Moscatel rdf:type owl:NamedIndividual ,
+                           :Wine ;
+                  :hasBody :Medium ;
+                  :hasColour :Rose ;
+                  :hasFlavour :Moderate ;
+                  :hasMaker :Valdespino ;
+                  :hasRegion :Jerez-Xeres-Sherry ;
+                  :hasSugar :Sweet ;
+                  :hasType :Sherry ;
+                  :madeWithGrape :Moscatel_de_Alejandría ;
+                  :hasConservationTemperature "15C" ;
+                  :hasDesignation "true"^^xsd:boolean ;
+                  :hasRating "4.8"^^xsd:float ;
+                  :hasYears 3 .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro
+:Toro rdf:type owl:NamedIndividual ,
+               :Region .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Toro_Albala
+:Toro_Albala rdf:type owl:NamedIndividual ,
+                      :Winery .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#Valdespino
+:Valdespino rdf:type owl:NamedIndividual ,
+                     :Winery ;
+            :locatedIn :Jerez-Xeres-Sherry ;
+            :makesWine :Toneles_Moscatel .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White
+:White rdf:type owl:NamedIndividual ,
+                :WineColour .
+
+
+###  http://www.semanticweb.org/david/ontologies/2023/3/pec2_rc_wine_ontology#White_meats
+:White_meats rdf:type owl:NamedIndividual ,
+                      :Fowl ;
+             :usedToPrepare :Cocido .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Consumables
+                :Region
+                :WineCharasteristics
+                :WineType
+                :Winery
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Dishes
+                :Drinkables
+                :Edibles
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Fowl
+                :Fruit
+                :Meat
+                :Pasta
+                :Seafood
+                :Vegetables
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#hd> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRegion ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#hd> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first "true"^^xsd:boolean ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDesignation ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#hd>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDesignation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                    rdf:first <urn:swrl:var#r> ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first 4 ;
+                                                                                                               rdf:rest rdf:nil
+                                                                                                             ]
+                                                                                                  ]
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Excellent ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                    rdf:first <urn:swrl:var#w> ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first 3.99 ;
+                                                                                                               rdf:rest rdf:nil
+                                                                                                             ]
+                                                                                                  ]
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#r> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 3 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Good ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
